@@ -369,6 +369,7 @@ define elasticsearch::instance (
         "${elasticsearch::configdir}/jvm.options",
         "${elasticsearch::configdir}/logging.yml",
         "${elasticsearch::configdir}/log4j2.properties",
+        "${elasticsearch::configdir}/elasticsearch.keystore",
       ],
       recurse      => 'remote',
       recurselimit => $configdir_recurselimit,
