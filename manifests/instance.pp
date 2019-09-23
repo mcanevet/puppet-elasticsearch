@@ -365,11 +365,11 @@ define elasticsearch::instance (
       # avoid overwriting instance-specific configuration files or other instance
       # directories.
       ignore       => [
-        "${configdir}/elasticsearch.yml",
-        "${configdir}/jvm.options",
-        "${configdir}/logging.yml",
-        "${configdir}/log4j2.properties",
-        "${configdir}/elasticsearch.keystore",
+        "elasticsearch.yml",
+        "jvm.options",
+        "logging.yml",
+        "log4j2.properties",
+        "elasticsearch.keystore",
       ],
       recurse      => 'remote',
       recurselimit => $configdir_recurselimit,
